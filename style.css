@@ -575,32 +575,84 @@ body {
 
 /* phone screen */
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 850px) {
   /* navbar */
 
+  .clicked {
+    color: var(--spark-semi-black);
+  }
+
   .navbar-container {
-    position: static;
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
     width: 80vw;
-    height: 10vh;
+    height: 12vh;
+    padding: 0 10vw;
     justify-content: space-between;
+    transition: all .3s ease-in-out;
+  }
+
+  .navbar-container.active {
+    background: var(--spark-white);
   }
 
   .logo {
     width: 60px;
   }
 
-  .navbar-links,
+  .navbar-links {
+    position: fixed;
+    left: -100%;
+    top: 10vh;
+    padding-top: 25vh;
+    transition: all .3s ease-in-out;
+    width: 100vw;
+    height: 90vh;
+    background: var(--spark-white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-links.active {
+    left: 0;
+    overflow: hidden;
+  }
+
+  .navbar-link {
+    margin-bottom: 2vh;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .navbar-linktree-container {
+    position: fixed;
+    left: -100%;
+    bottom: 20vh;
+    width: 100vw;
+    transition: all .3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar-linktree-container.active {
+    left: 0;
+  }
+
   .navbar-linktree {
-    display: none;
+    scale: 1.2;
   }
 
   .navbar-hamburger {
     display: block;
+    cursor: pointer;
   }
 
   .fa-bars {
     color: var(--spark-semi-black);
-    font-size: 20px;
+    font-size: 22px;
   }
 
   /* hero */
@@ -612,23 +664,24 @@ body {
   .hero-container {
     flex-direction: column;
     padding: 0 10vw;
-    height: 80vh;
+    height: 100vh;
   }
 
   .hero-texts {
     justify-content: initial;
     align-items: center;
-    margin-top: 6vh;
+    margin-top: 18vh;
   }
 
   .hero-slogan {
-    font-size: 32px;
+    font-size: 34px;
     margin-bottom: 26px;
     text-align: center;
   }
 
   .hero-description {
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
     margin-bottom: 26px;
     text-align: center;
   }
@@ -688,8 +741,17 @@ body {
     flex-direction: column;
   }
 
+  .final-program-texts {
+    margin: 24px 36px;
+  }
+
   .final-program-title {
     margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .final-program-description {
+    font-size: 14px;
   }
 
   .final-program-location {
@@ -724,5 +786,9 @@ body {
 
   .join-volunteer-button {
     font-size: 20px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
   }
 }
