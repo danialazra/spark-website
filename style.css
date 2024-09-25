@@ -310,15 +310,21 @@ body {
 }
 
 .card {
-  padding: 28px 36px;
   border-radius: 18px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in-out;
-  min-height: 288px;
+  min-height: 388px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+}
+
+.card-texts {
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -330,6 +336,11 @@ body {
   margin: 0 4vw;
 }
 
+.card-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
 .card-title {
   padding: 8px 14px;
   border-radius: 8px;
@@ -339,10 +350,12 @@ body {
 .card-activity {
   font-size: 20px;
   font-weight: 700;
+  margin: 2vh 0;
 }
 
 .card-description {
   font-size: 14px;
+  margin-bottom: 2vh;
 }
 
 .card-readmore {
