@@ -27,6 +27,7 @@
 * {
   font-family: 'Poppins', sans-serif;
   color: var(--spark-black);
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -338,6 +339,8 @@ body {
 
 .card-img {
   width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
   border-radius: 8px 8px 0 0;
 }
 
